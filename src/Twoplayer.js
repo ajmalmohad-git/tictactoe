@@ -3,9 +3,11 @@ import './Twoplayer.css'
 import Yay from './Yay'
 
 
-let clicked = []
+
 
 function Twoplayer() {
+
+    let clicked = []
 
     let id0 = React.createRef()
     let id1 = React.createRef()
