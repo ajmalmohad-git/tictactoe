@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import './Twoplayer.css'
+import './Game.css'
 import Yay from './Yay'
 
 
