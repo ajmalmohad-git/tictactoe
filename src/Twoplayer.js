@@ -70,7 +70,7 @@ function Twoplayer() {
             else if(id0.current.textContent&&id1.current.textContent&&id2.current.textContent&&id3.current.textContent&&id4.current.textContent
                    &&id5.current.textContent&&id6.current.textContent&&id7.current.textContent&&id8.current.textContent)
            {
-               setWinner(win='Draw')
+               setWinner(win='Tie')
                setWon(won=1);
            }
     }
