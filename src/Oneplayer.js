@@ -24,9 +24,16 @@ function Oneplayer() {
     let v = [id0,id1,id2,id3,id4,id5,id6,id7,id8]
 
     let handleClick=(i)=>{
-        if(clicked.includes(i))
+        if(clicked.includes(i) && clicked.length<9)
         {  
-            return
+            if(turn===0)
+            {
+                computer()
+            }
+            else
+            {
+                return
+            }
         }
         else
         {
@@ -36,6 +43,7 @@ function Oneplayer() {
                 clicked.push(i)
                 checkWin()
                 setTurn(turn=0)
+                computer()
             }
             else
             {
@@ -75,6 +83,12 @@ function Oneplayer() {
                clicked = [];
                setWon(won=1);
            }
+    }
+
+
+    let computer=()=>{
+        let r = Math.floor(Math.random()*9);
+        handleClick(r)
     }
     
     return (
