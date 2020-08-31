@@ -1,0 +1,61 @@
+.wincont {
+  height: 500px;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+}
+.winnername
+{
+    flex:0.6;
+    text-align: center;
+    color:rgb(153, 153, 153);
+}
+.winner
+{
+    font-size:150px;
+}
+.won
+{
+    font-size:30px;
+    font-variant: small-caps;
+}
+
+
+.gohome
+{
+    flex:0.4;
+    cursor: pointer;
+    width:200px;
+    margin:20% 80px;
+    height:80px;
+    font-size:26px;
+    border-radius: 15px;
+    border:none;
+    background:#0a0a0a;
+    color:rgb(153, 153, 153);
+    box-shadow: 
+    6px 6px 16px 0 rgba(0, 0, 0, 0.863),
+    -4px -4px 8px 0 rgba(255, 255, 255, 0.034);
+    transition: 0.4s ease;
+}
+.gohome:focus
+{
+    outline: none;
+    box-shadow: inset 3px 3px 8px 0 rgba(0, 0, 0, 0.712),
+    inset -3px -3px 8px 0 rgba(255, 255, 255, 0.048);
+    color:rgb(201, 201, 201);
+    transition: 0.4s ease;
+}
+.gohome:hover
+{
+    box-shadow: inset 3px 3px 8px 0 rgba(0, 0, 0, 0.712),
+    inset -3px -3px 8px 0 rgba(255, 255, 255, 0.048);
+    color:rgb(201, 201, 201);
+    transition: 0.4s ease;
+}
