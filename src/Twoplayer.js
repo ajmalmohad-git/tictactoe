@@ -3,11 +3,9 @@ import './Twoplayer.css'
 import Yay from './Yay'
 
 
-
+let clicked = []
 
 function Twoplayer() {
-
-    let clicked = []
 
     let id0 = React.createRef()
     let id1 = React.createRef()
@@ -62,17 +60,20 @@ function Twoplayer() {
             if(c1==='XXX'||c2==='XXX'||c3==='XXX'||c4==='XXX'||c5==='XXX'||c6==='XXX'||c7==='XXX'||c8==='XXX')
             {
                 setWinner(win='X');
+                clicked = []
                 setWon(won=1);
             }
             else if(c1==='OOO'||c2==='OOO'||c3==='OOO'||c4==='OOO'||c5==='OOO'||c6==='OOO'||c7==='OOO'||c8==='OOO')
             {
                 setWinner(win='O');
+                clicked = []
                 setWon(won=1);
             }
             else if(id0.current.textContent&&id1.current.textContent&&id2.current.textContent&&id3.current.textContent&&id4.current.textContent
                    &&id5.current.textContent&&id6.current.textContent&&id7.current.textContent&&id8.current.textContent)
            {
                setWinner(win='Tie')
+               clicked = []
                setWon(won=1);
            }
     }
