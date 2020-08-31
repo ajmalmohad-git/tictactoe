@@ -76,21 +76,6 @@ function Twoplayer() {
                setWon(won=1);
            }
     }
-
-    // let reset =()=>{
-    //     id0.current.textContent = null;
-    //     id1.current.textContent = null;
-    //     id2.current.textContent = null;
-    //     id3.current.textContent = null;
-    //     id4.current.textContent = null;
-    //     id5.current.textContent = null;
-    //     id6.current.textContent = null;
-    //     id7.current.textContent = null;
-    //     id8.current.textContent = null;
-    //     setWinner(win='');
-    //     setWon(won=0);
-    //     setTurn(turn=1);
-    // }
     
     return (
         <div className="cont">
