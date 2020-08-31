@@ -7,7 +7,7 @@ function Yay(props) {
     <div className="wincont">
       <div className="winnername">
         <p className="winner">{props.winner}</p>
-        <p className="won">Won</p>
+        <p className="won">{props.winner==="Tie" ? '' : 'Won'}</p>
       </div>
       <Link to="/"><button className="gohome">Home</button></Link>
     </div>
