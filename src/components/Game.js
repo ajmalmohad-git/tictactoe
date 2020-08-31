@@ -4,7 +4,7 @@ import Yay from './Yay'
 
 let clicked = []
 
-function Oneplayer() {
+function Game(props) {
 
     let id0 = React.createRef()
     let id1 = React.createRef()
@@ -26,9 +26,16 @@ function Oneplayer() {
     let handleClick=(i)=>{
         if(clicked.includes(i) && clicked.length<9)
         {  
-            if(turn===0)
+            if(!props.multi)
+            {
+               if(turn===0)
             {
                 computer()
+            }
+            else
+            {
+                return
+            } 
             }
             else
             {
@@ -43,11 +50,13 @@ function Oneplayer() {
                 clicked.push(i)
                 checkWin()
                 setTurn(turn=0)
-                computer()
+                if(!props.multi)
+                {
+                  computer()  
+                }
             }
             else
             {
-                // syncWait(1000)
                 v[i].current.textContent = "O"
                 clicked.push(i)
                 checkWin()
@@ -86,11 +95,6 @@ function Oneplayer() {
            }
     }
 
-    // const syncWait = ms => {
-    //     const end = Date.now() + ms
-    //     while (Date.now() < end) continue
-    // }
-
     let computer=()=>{
         let r = Math.floor(Math.random()*9);
         handleClick(r)
@@ -119,4 +123,4 @@ function Oneplayer() {
     )
     }
 
-export default Oneplayer
+export default Game

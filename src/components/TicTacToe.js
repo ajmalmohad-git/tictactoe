@@ -1,8 +1,8 @@
 import React from 'react'
-import './Welcome.css'
+import './TicTacToe.css'
 import { Link} from 'react-router-dom'
 
-function Welcome() {
+function TicTacToe() {
     return (
         <div className="welcomepage">
         <div className="content">
@@ -16,4 +16,4 @@ function Welcome() {
         </div>
     )
 }
-export default Welcome
+export default TicTacToe

@@ -1,17 +1,18 @@
 import React from 'react'
-import TicTacToe from "./TicTacToe";
+import TicTacToe from "./components/TicTacToe";
 import { Route} from 'react-router-dom'
-import Oneplayer from './Oneplayer';
-import Twoplayer from './Twoplayer';
-import Yay from './Yay';
+import Game from './components/Game';
 
 function App() {
   return (
     <div>
       <Route path="/" exact component={TicTacToe}/>
-      <Route path="/singleplayer"  component={Oneplayer}/>
-      <Route path="/multiplayer"  component={Twoplayer}/>
-      <Route path="/winner"  component={Yay}/>
+      <Route path="/singleplayer">
+        <Game multi={false}/>
+      </Route>
+      <Route path="/multiplayer">
+        <Game multi={true}/>
+      </Route>
     </div>
   )
 }
