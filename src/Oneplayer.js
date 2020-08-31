@@ -47,6 +47,7 @@ function Oneplayer() {
             }
             else
             {
+                // syncWait(1000)
                 v[i].current.textContent = "O"
                 clicked.push(i)
                 checkWin()
@@ -85,6 +86,10 @@ function Oneplayer() {
            }
     }
 
+    // const syncWait = ms => {
+    //     const end = Date.now() + ms
+    //     while (Date.now() < end) continue
+    // }
 
     let computer=()=>{
         let r = Math.floor(Math.random()*9);
