@@ -26,21 +26,7 @@ function Game(props) {
     let handleClick=(i)=>{
         if(clicked.includes(i) && clicked.length<9)
         {  
-            if(!props.multi)
-            {
-               if(turn===0)
-            {
-                computer()
-            }
-            else
-            {
-                return
-            } 
-            }
-            else
-            {
-                return
-            }
+            return
         }
         else
         {
@@ -52,11 +38,12 @@ function Game(props) {
                 setTurn(turn=0)
                 if(!props.multi)
                 {
-                  computer()  
+                  computer()
                 }
             }
             else
             {
+                console.log(v[i]);
                 v[i].current.textContent = "O"
                 clicked.push(i)
                 checkWin()
@@ -95,8 +82,13 @@ function Game(props) {
            }
     }
 
+
     let computer=()=>{
         let r = Math.floor(Math.random()*9);
+        if(clicked.includes(r) && clicked.length<9)
+        {
+            computer()
+        }
         handleClick(r)
     }
     
